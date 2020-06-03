@@ -519,7 +519,7 @@ body{
 /*-- feedback --*/
 .feedback{
 	background:url(../images/3.jpg) no-repeat 0px 0px;
-	background:size:cover;
+	background:size cover;
 }
 .feedback-top{
     padding: 1em;
