@@ -81,9 +81,6 @@ body{
 .w3ls-banner-left-info p a:hover{
 	color:#FF9800;
 }
-.w3ls-banner-left-info:nth-child(5){
-	border:none;
-}
 .banner-right-img{
     float: left;
     width: 30%;
