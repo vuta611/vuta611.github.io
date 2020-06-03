@@ -369,8 +369,7 @@ body{
     margin: 4em 0 0 0;
 }
 .agile-statistics-grid{
-    text-align:center;
-    position:relative;
+	text-align:center;
 }
 .agile-statistics-grid h4{
     color: #FFFFFF;
