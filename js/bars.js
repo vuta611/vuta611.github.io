@@ -21,7 +21,7 @@ function data_labels(){
 
 function show_values(){
     $(".bar_group__bar").each(function(){
-        "true"==$(this).attr("show_values")&&($(this).css("margin-bottom","40px"),void 0!==$(this).attr("unit")?($(this).append('<p class="bar_label_min">0 '+$(this).attr("unit")+"</p>"),$(this).append('<p class="bar_label_max">'+$(this).parent().data("bg_max")+" "+$(this).attr("unit")+"</p>")):($(this).append('<p class="bar_label_min">0</p>'),$(this).append('<p class="bar_label_max">'+$(this).parent().data("bg_max")+"</p>")))
+        "true"==$(this).attr("show_values")&&($(this).css("margin-bottom","40px"),void 0!==$(this).attr("unit")?($(this).append('<p class="bar_label_min">0 '+$(this).attr("unit")+"</p>"),$(this).append('<p class="bar_label_max">'+$(this).attr("max")+" "+$(this).attr("unit")+"</p>")):($(this).append('<p class="bar_label_min">0</p>'),$(this).append('<p class="bar_label_max">'+$(this).attr("max")+"</p>")))
     })
 }
 
@@ -32,7 +32,7 @@ function show_tooltips(){
 }
 
 function in_view(t){
-    var a=$(t),i=$(window),s=i.scrollTop(),r=s+i.height(),n=a.offset().top,o=n+a.height();r>o-45&&a.css("width",a.attr("value")/a.parent().data("bg_max")*100+"%")
+    var a=$(t),i=$(window),s=i.scrollTop(),r=s+i.height(),n=a.offset().top,o=n+a.height();r>o-45&&a.css("width",a.attr("value")/a.attr("max")*100+"%")
 }
 
 function bars(){
