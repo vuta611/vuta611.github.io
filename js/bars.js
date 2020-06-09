@@ -3,16 +3,16 @@ function bar_group(){
         $(this).addClass("group_ident-"+group_ident),$(this).data("gid",group_ident),group_ident++
     })
 }
-
+/*
 function get_max(){
     $(".bar_group").each(function(){
         var t=[];
         $(this).children().each(function(){
-            t.push($(this).attr("value")+40)
+            t.push($(this).attr("value"))
         }),max_arr["group_ident-"+$(this).data("gid")]=t,void 0!==$(this).attr("max")?$(this).data("bg_max",$(this).attr("max")):$(this).data("bg_max",Math.max.apply(null,t))
     })
 }
-
+*/
 function data_labels(){
     $(".bar_group__bar").each(function(){
         void 0!==$(this).attr("label")&&$('<p class="b_label">'+$(this).attr("label")+"</p>").insertBefore($(this))
@@ -36,7 +36,7 @@ function in_view(t){
 }
 
 function bars(){
-    bar_group(),get_max(),data_labels(),show_tooltips(),show_values()
+    bar_group()/*,get_max()*/,data_labels(),show_tooltips(),show_values()
 }
 
 max_arr={},$(".bar_group__bar").each(function(){
